@@ -1,5 +1,5 @@
 langchain==0.0.214
-pinecone-client==2.2.2
+pinecone-client==2.2.1
 openai
 streamlit
 streamlit-chat
