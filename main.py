@@ -1,6 +1,5 @@
 # SET UP
-import pinecone
-import streamlit as st
+import streamlit as st, pinecone
 from streamlit_chat import message
 
 from langchain.chains import RetrievalQA
