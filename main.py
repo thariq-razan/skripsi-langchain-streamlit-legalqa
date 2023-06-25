@@ -1,17 +1,15 @@
 # SET UP
-import streamlit as st, pinecone
+import streamlit as st
+import pinecone
 from streamlit_chat import message
-
 from langchain.chains import RetrievalQA
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import Pinecone
 from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
-
 import os
-os.environ["OPENAI_API_KEY"] = st.secrets.openai_credentials.key
-pinecone.init(api_key=st.secrets.pinecone_credentials.key, environment=st.secrets.pinecone_credentials.environment)
-
+os.environ["OPENAI_API_KEY"] = st.secrets.openai_credentials.api_key
+pinecone.init(api_key=st.secrets.pinecone_credentials.api_key, environment=st.secrets.pinecone_credentials.environment)
 
 
 # BACKEND
