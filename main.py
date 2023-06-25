@@ -1,4 +1,6 @@
 # SET UP
+!pip install -qU pinecone-client # type: ignore
+
 import pinecone
 import streamlit as st
 from streamlit_chat import message
