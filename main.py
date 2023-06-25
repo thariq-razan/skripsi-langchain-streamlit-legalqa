@@ -9,8 +9,9 @@ from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 
 import os
-os.environ["OPENAI_API_KEY"] = "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"
-pinecone.init(api_key="ff5152ae-4d4d-4adb-a49b-58ea4491d0a7", environment="us-west4-gcp")
+os.environ["OPENAI_API_KEY"] = st.secrets.openai_credentials.key
+pinecone.init(api_key=st.secrets.pinecone_credentials.key, environment=st.secrets.pinecone_credentials.environment)
+
 
 
 # BACKEND
